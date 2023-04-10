@@ -125,7 +125,6 @@ jobs:
               echo "Installation of Microsoft.VisualStudio.Component.WinXP finished"
           fi
           cd $VCPKG_INSTALLATION_ROOT
-          git pull
           ./bootstrap-vcpkg.sh -disableMetrics
           nuget=$(./vcpkg.exe fetch nuget | tail -n 1)
           owner="${GITHUB_REPOSITORY%/*}"
